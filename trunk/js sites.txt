@@ -1,0 +1,4 @@
+for compile
+________________
+
+http://www.jslint.com/
