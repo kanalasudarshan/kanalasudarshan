@@ -1,0 +1,30 @@
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background: #fff;
+	margin: 0 20px;
+	padding: 0;
+	color: #000;
+	font-size:14px;
+}
+.hs{
+	font-size:25px;
+	color:#880;
+}
+.hs1{
+	font-size:25px;
+	color:#940;
+}
+.h1{
+	font-size:22px;
+}
+.h3{
+	font-size:14px;
+	color:#940;
+}
+.h2{
+	font-size:14px;
+	color:#880;
+}
+.jsif{
+	border:1px solid #990;
+}

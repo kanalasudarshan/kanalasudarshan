@@ -1,0 +1,46 @@
+<html>
+<head>
+<style type="text/css">
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background: #fff;
+	margin: 16px 20px;
+	padding: 0;
+	color: #000;
+	font-size:14px;
+	
+}
+.ps{
+	color:#880;
+}
+#ct{
+	color:#940;
+}
+</style>
+<script type="text/javascript">
+function mytime(){
+
+	var d=new Date();
+	var h=d.getHours();
+	var m=d.getMinutes();
+	var s=d.getSeconds();
+	var ampm="AM";
+	if(h>12){
+		h=h-12;
+		ampm="PM"
+	}
+	var ctime=h+":"+m+":"+s+" "+ampm;
+	
+	document.getElementById('ct').innerHTML=ctime;
+}
+<!-- setInterval('mytime()', 1000 ); -->
+
+
+</script>
+</head>
+<body  onload="setInterval('mytime()', 1000 )">
+
+<p class="ps">Current Time is:&nbsp;<span id="ct"></span></p>
+
+</body>
+</html>

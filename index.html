@@ -1,0 +1,69 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="style.css" type="text/css">
+
+<script type="text/javascript">
+function goCheck(){
+	
+	var us=document.forms[0].username.value;
+	var pwd=document.forms[0].password.value;
+	if(us=="sudas"&&pwd=="sudas"){
+		document.forms[0].action="sreddy.html";
+	}else{
+		document.forms[0].username.focus;
+		return false;
+	}
+}
+</script>
+</head>
+<body>
+
+<div class="header">
+	<div class="menu">
+		<ul>
+			<li>Home</li>
+			<li>Contact</li>
+			<li>Gallery</li>
+			<li>About</li>
+			<li>Help</li>
+    	</ul>
+	</div>
+	<div class="logo">
+		<img src="title.png"/>
+	</div>
+	
+</div>
+<div class="mbody">
+	<div class="vbar1">
+		
+	</div>
+	<div class="mainframe">
+		<div class="frame1">
+				<embed src="madagascar3.mp4" width="590" height="330">
+		</div>
+		<div class="frame2">
+			<div class="lform">
+				<form onsubmit="return goCheck()">
+					<span>
+						<label>User Name</label><br>
+						<input type="text" name="username"/><br>
+					</span>
+					<span>
+						<label>Password</label><br>
+						<input type="password" name="password"/><br><br>
+					</span>
+					<span>
+						<input type="submit" value="Login">
+						<input type="reset" value="clear"><br>
+					</span>
+					<span class="rem">If you are new user</span><input type="button" value="CREATE AN ACCOUNT ">	
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="footer">ss
+</div>
+</body>
+</html>

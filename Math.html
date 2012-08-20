@@ -1,0 +1,121 @@
+<html>
+<head>
+<style type="text/css">
+body{
+	font-family:Georgia;
+	font-size:18px;
+}
+#av,#bv{
+	font-family:verdana;
+	color:red;
+	font-size:16px;
+}
+
+input[type="button"]{
+	
+	font-size: 15px;
+	font-weight: bold;
+	height: 27px;
+	padding: 0 8px;
+	line-height: 25px;
+	border-radius: 2px;
+	border: 1px solid #940;
+	background:#940;
+	-webkit-transition: all 0.218s linear;
+	color:#fff;
+ 
+}
+input[type="botton"]:hover{
+	color:#000;
+	box-shadow:1px 1px 2px #940,-1px -1px 5px #940;
+ 
+}
+
+</style>
+<script type="text/javascript">
+function onGo(link){
+	var avalue=document.forms[0].username.value;
+	var bvalue=document.forms[0].password.value
+	var a=parseInt(avalue);
+	var b=parseInt(bvalue);
+	
+	<!--  A Value check .........-->
+	if(avalue==""){
+		document.getElementById('av').innerHTML="Enter A value";
+		document.forms[0].username.focus();
+		return false;
+	}else 
+	if(avalue.length>10){
+		document.getElementById('av').innerHTML="Enter 10 digits only";
+		document.forms[0].username.focus();
+		return false;
+	}else{
+		document.getElementById('av').innerHTML="";
+	}
+	
+	<!--  B Value check .........-->
+	if(bvalue==""){
+		document.getElementById('bv').innerHTML="Enter B value";
+		document.forms[0].password.focus();
+		return false;
+	}else 
+	if(bvalue.length>10){
+		document.getElementById('bv').innerHTML="Enter 10 digits only";
+		document.forms[0].password.focus();
+		return false;
+	}else{
+		document.getElementById('bv').innerHTML="";
+	}
+	
+	<!--  Perfoming operations .........-->
+	if(link=='+'){
+		document.getElementById('rs').innerHTML=a+b;
+	}else
+	if(link=='-'){
+		document.getElementById('rs').innerHTML=a-b;
+	}else
+	if(link=='*'){
+		document.getElementById('rs').innerHTML=a*b;
+	}else
+	if(link=='/'){
+		document.getElementById('rs').innerHTML=a/b;
+	}else{
+		document.getElementById('rs').innerHTML=a%b;
+	}
+}
+
+function atextvalid(){
+	if(event.keyCode<48||event.keyCode>58){
+		document.getElementById('av').innerHTML='Not a number';
+		return false;
+	}else{
+		document.getElementById('av').innerHTML="";
+	}
+}
+function btextvalid(){
+	if(event.keyCode<48||event.keyCode>58){
+		document.getElementById('bv').innerHTML='Not a number';
+		return false;
+	}else{
+		document.getElementById('bv').innerHTML="";
+	}
+}
+
+
+</script>
+</head>
+<body>
+<form name="id"> 
+<span id="ct"></span><br>
+A value<input type="text" id="a" name="username" onkeypress="atextvalid()"><span id="av"></span><br>
+B value<input type="text" id="b" name="password" onkeypress="btextvalid()"><span id="bv"></span></br>
+<input type="button" value=" + " onclick="onGo('+')">
+<input type="button" value=" - " onclick="onGo('-')">
+<input type="button" value=" * " onclick="onGo('*')">
+<input type="button" value=" / " onclick="onGo('/')">
+<input type="button" value=" % " onclick="onGo('%')">
+<p>The Result is : <span id="rs"></span></p><span id="av"></span>
+</form>
+To see Code Click <a href="pdf\js\arithmetic.pdf" target="if">here</a>
+</body>
+</html>
