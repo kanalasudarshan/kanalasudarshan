@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="springwebapp"
+  id="myeclipse.1345671619767"
+  context-root="/springwebapp"
+  j2ee-spec="5.0"
+  archive="springwebapp.war">
+  <attributes>
+    <attribute name="webrootdir" value="springwebapp" />
+  </attributes>
+</project-module>
+
