@@ -6,4 +6,14 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 
-</beans>
+	<bean id="JspViewResource"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+		abstract="false" lazy-init="default" autowire="default"
+		dependency-check="default">
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+		<property name="prefix">
+			<value>/pages</value>
+		</property>
+	</bean></beans>
